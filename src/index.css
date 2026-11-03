@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #111110;
+  --surface: #191816;
+  --border: #2A2724;
+  --text: #F2EFE9;
+  --muted: #918A81;
+  --accent: #C8623B;
+
+  --font-heading: 'Onest', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-review: 'Lora', Georgia, serif;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+/* Headings font */
+h1, h2, h3, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  text-transform: none;
+}
+
+h1 {
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* Reviews font */
+.font-review {
+  font-family: var(--font-review);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Base interactive focus outline */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Strict prohibition overrides: ensure no shadows or blur leaks */
+*, *::before, *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+}
